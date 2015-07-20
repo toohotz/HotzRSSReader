@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3677184CF9AFC138FB9B4CD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1C7DC857F2DB59AE9F8010 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E91F39C71B59786B00EB068A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F39C61B59786B00EB068A /* AppDelegate.swift */; };
 		E91F39C91B59786B00EB068A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F39C81B59786B00EB068A /* ViewController.swift */; };
 		E91F39CC1B59786B00EB068A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91F39CA1B59786B00EB068A /* Main.storyboard */; };
 		E91F39CE1B59786B00EB068A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91F39CD1B59786B00EB068A /* Images.xcassets */; };
 		E91F39D11B59786B00EB068A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91F39CF1B59786B00EB068A /* LaunchScreen.xib */; };
 		E91F39DD1B59786B00EB068A /* HotzRSSReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F39DC1B59786B00EB068A /* HotzRSSReaderTests.swift */; };
+		E91F3A151B5C814A00EB068A /* RSSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F3A141B5C814A00EB068A /* RSSTableViewCell.swift */; };
+		E91F3A161B5C814A00EB068A /* RSSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F3A141B5C814A00EB068A /* RSSTableViewCell.swift */; };
+		E91F3A261B5C8EB500EB068A /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = E91F3A231B5C8EB500EB068A /* Stack.m */; };
+		E91F3A271B5C8EB500EB068A /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = E91F3A231B5C8EB500EB068A /* Stack.m */; };
+		E94B962D1B5C92690001B7C8 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B962C1B5C92690001B7C8 /* XMLParser.m */; };
+		E94B962E1B5C92690001B7C8 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B962C1B5C92690001B7C8 /* XMLParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3481C9B15DE0A856EEBCFCDC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CA1C7DC857F2DB59AE9F8010 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9573504078AF85522BE527C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E91F39C11B59786B00EB068A /* HotzRSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotzRSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91F39C51B59786B00EB068A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E91F39C61B59786B00EB068A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +46,13 @@
 		E91F39D61B59786B00EB068A /* HotzRSSReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotzRSSReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91F39DB1B59786B00EB068A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E91F39DC1B59786B00EB068A /* HotzRSSReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotzRSSReaderTests.swift; sourceTree = "<group>"; };
+		E91F3A141B5C814A00EB068A /* RSSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSTableViewCell.swift; sourceTree = "<group>"; };
+		E91F3A1D1B5C8E7700EB068A /* HotzRSSReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HotzRSSReader-Bridging-Header.h"; sourceTree = "<group>"; };
+		E91F3A1E1B5C8E7700EB068A /* HotzRSSReaderTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HotzRSSReaderTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		E91F3A221B5C8EB500EB068A /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		E91F3A231B5C8EB500EB068A /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		E94B962B1B5C92690001B7C8 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		E94B962C1B5C92690001B7C8 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3677184CF9AFC138FB9B4CD /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +74,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A7DB0F02E98E50271D5E70B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA1C7DC857F2DB59AE9F8010 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		519782653EEB6CD7757F64FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9573504078AF85522BE527C /* Pods.debug.xcconfig */,
+				3481C9B15DE0A856EEBCFCDC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E91F39B81B59786B00EB068A = {
 			isa = PBXGroup;
 			children = (
 				E91F39C31B59786B00EB068A /* HotzRSSReader */,
 				E91F39D91B59786B00EB068A /* HotzRSSReaderTests */,
 				E91F39C21B59786B00EB068A /* Products */,
+				519782653EEB6CD7757F64FF /* Pods */,
+				0A7DB0F02E98E50271D5E70B /* Frameworks */,
+				E91F3A1D1B5C8E7700EB068A /* HotzRSSReader-Bridging-Header.h */,
+				E91F3A1E1B5C8E7700EB068A /* HotzRSSReaderTests-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,7 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				E91F39C61B59786B00EB068A /* AppDelegate.swift */,
-				E91F39C81B59786B00EB068A /* ViewController.swift */,
+				E94B96311B5C94500001B7C8 /* Views */,
+				E94B962F1B5C943C0001B7C8 /* XML Parsing */,
+				E91F3A131B5C813700EB068A /* Controllers */,
 				E91F39CA1B59786B00EB068A /* Main.storyboard */,
 				E91F39CD1B59786B00EB068A /* Images.xcassets */,
 				E91F39CF1B59786B00EB068A /* LaunchScreen.xib */,
@@ -112,6 +153,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E91F3A131B5C813700EB068A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E91F39C81B59786B00EB068A /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E94B962F1B5C943C0001B7C8 /* XML Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				E94B962B1B5C92690001B7C8 /* XMLParser.h */,
+				E94B962C1B5C92690001B7C8 /* XMLParser.m */,
+				E91F3A221B5C8EB500EB068A /* Stack.h */,
+				E91F3A231B5C8EB500EB068A /* Stack.m */,
+			);
+			name = "XML Parsing";
+			sourceTree = "<group>";
+		};
+		E94B96311B5C94500001B7C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E91F3A141B5C814A00EB068A /* RSSTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E91F39E01B59786B00EB068A /* Build configuration list for PBXNativeTarget "HotzRSSReader" */;
 			buildPhases = (
+				E01EAB68698D67E104181C77 /* Check Pods Manifest.lock */,
 				E91F39BD1B59786B00EB068A /* Sources */,
 				E91F39BE1B59786B00EB068A /* Frameworks */,
 				E91F39BF1B59786B00EB068A /* Resources */,
+				9B871E17E5EDEA385CDFDEE3 /* Embed Pods Frameworks */,
+				B6AEEA3C1A9037DBCE1E73EE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,11 +278,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9B871E17E5EDEA385CDFDEE3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6AEEA3C1A9037DBCE1E73EE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E01EAB68698D67E104181C77 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E91F39BD1B59786B00EB068A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E94B962D1B5C92690001B7C8 /* XMLParser.m in Sources */,
+				E91F3A261B5C8EB500EB068A /* Stack.m in Sources */,
+				E91F3A151B5C814A00EB068A /* RSSTableViewCell.swift in Sources */,
 				E91F39C91B59786B00EB068A /* ViewController.swift in Sources */,
 				E91F39C71B59786B00EB068A /* AppDelegate.swift in Sources */,
 			);
@@ -221,6 +343,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91F3A161B5C814A00EB068A /* RSSTableViewCell.swift in Sources */,
+				E91F3A271B5C8EB500EB068A /* Stack.m in Sources */,
+				E94B962E1B5C92690001B7C8 /* XMLParser.m in Sources */,
 				E91F39DD1B59786B00EB068A /* HotzRSSReaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,21 +465,28 @@
 		};
 		E91F39E11B59786B00EB068A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9573504078AF85522BE527C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HotzRSSReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HotzRSSReader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		E91F39E21B59786B00EB068A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3481C9B15DE0A856EEBCFCDC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HotzRSSReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HotzRSSReader-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -362,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -373,6 +506,8 @@
 				INFOPLIST_FILE = HotzRSSReaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HotzRSSReaderTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotzRSSReader.app/HotzRSSReader";
 			};
 			name = Debug;
@@ -381,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -388,6 +524,7 @@
 				INFOPLIST_FILE = HotzRSSReaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HotzRSSReaderTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotzRSSReader.app/HotzRSSReader";
 			};
 			name = Release;
@@ -411,6 +548,7 @@
 				E91F39E21B59786B00EB068A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E91F39E31B59786B00EB068A /* Build configuration list for PBXNativeTarget "HotzRSSReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +557,7 @@
 				E91F39E51B59786B00EB068A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

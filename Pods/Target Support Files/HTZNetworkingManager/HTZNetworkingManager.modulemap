@@ -1,0 +1,6 @@
+framework module HTZNetworkingManager {
+  umbrella header "HTZNetworkingManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

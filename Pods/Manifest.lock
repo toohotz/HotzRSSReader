@@ -1,0 +1,22 @@
+PODS:
+  - Alamofire (1.2.3)
+  - HTZNetworkingManager (0.1.0):
+    - Alamofire
+
+DEPENDENCIES:
+  - HTZNetworkingManager (from `https://github.com/toohotz/HotzNetworkingManager.git`)
+
+EXTERNAL SOURCES:
+  HTZNetworkingManager:
+    :git: https://github.com/toohotz/HotzNetworkingManager.git
+
+CHECKOUT OPTIONS:
+  HTZNetworkingManager:
+    :commit: 2fed5c84989436cda89050333515744f89b430cf
+    :git: https://github.com/toohotz/HotzNetworkingManager.git
+
+SPEC CHECKSUMS:
+  Alamofire: 5550bf0b575ed1a4bf9be572f9463e1015cc169e
+  HTZNetworkingManager: 8fd4ed7bee52d5321167168f908d49b3a2ecff77
+
+COCOAPODS: 0.38.0
