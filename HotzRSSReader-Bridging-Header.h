@@ -3,3 +3,4 @@
 //
 
 #import "XMLParser.h"
+#import "GDataXMLNode.h"

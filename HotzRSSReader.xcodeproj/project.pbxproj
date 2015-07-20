@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A3677184CF9AFC138FB9B4CD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1C7DC857F2DB59AE9F8010 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E90A93F91B5CB21F00380F9D /* RSSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A93F81B5CB21F00380F9D /* RSSModel.swift */; };
 		E91F39C71B59786B00EB068A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F39C61B59786B00EB068A /* AppDelegate.swift */; };
 		E91F39C91B59786B00EB068A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F39C81B59786B00EB068A /* ViewController.swift */; };
 		E91F39CC1B59786B00EB068A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91F39CA1B59786B00EB068A /* Main.storyboard */; };
@@ -20,6 +21,9 @@
 		E91F3A271B5C8EB500EB068A /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = E91F3A231B5C8EB500EB068A /* Stack.m */; };
 		E94B962D1B5C92690001B7C8 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B962C1B5C92690001B7C8 /* XMLParser.m */; };
 		E94B962E1B5C92690001B7C8 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B962C1B5C92690001B7C8 /* XMLParser.m */; };
+		E94B96351B5C9CE40001B7C8 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B96341B5C9CE40001B7C8 /* GDataXMLNode.m */; };
+		E94B96381B5C9D020001B7C8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E94B96371B5C9D020001B7C8 /* libxml2.dylib */; };
+		E94B963C1B5CA6940001B7C8 /* GDataXMLNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B963B1B5CA6940001B7C8 /* GDataXMLNodeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,7 @@
 		3481C9B15DE0A856EEBCFCDC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA1C7DC857F2DB59AE9F8010 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9573504078AF85522BE527C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E90A93F81B5CB21F00380F9D /* RSSModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSModel.swift; sourceTree = "<group>"; };
 		E91F39C11B59786B00EB068A /* HotzRSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotzRSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91F39C51B59786B00EB068A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E91F39C61B59786B00EB068A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +58,11 @@
 		E91F3A231B5C8EB500EB068A /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		E94B962B1B5C92690001B7C8 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
 		E94B962C1B5C92690001B7C8 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
+		E94B96331B5C9CE40001B7C8 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		E94B96341B5C9CE40001B7C8 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		E94B96371B5C9D020001B7C8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		E94B96391B5C9DB30001B7C8 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		E94B963B1B5CA6940001B7C8 /* GDataXMLNodeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDataXMLNodeExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E94B96381B5C9D020001B7C8 /* libxml2.dylib in Frameworks */,
 				A3677184CF9AFC138FB9B4CD /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +88,8 @@
 		0A7DB0F02E98E50271D5E70B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E94B96391B5C9DB30001B7C8 /* libxml2.2.dylib */,
+				E94B96371B5C9D020001B7C8 /* libxml2.dylib */,
 				CA1C7DC857F2DB59AE9F8010 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -116,6 +129,7 @@
 		E91F39C31B59786B00EB068A /* HotzRSSReader */ = {
 			isa = PBXGroup;
 			children = (
+				E90A93F81B5CB21F00380F9D /* RSSModel.swift */,
 				E91F39C61B59786B00EB068A /* AppDelegate.swift */,
 				E94B96311B5C94500001B7C8 /* Views */,
 				E94B962F1B5C943C0001B7C8 /* XML Parsing */,
@@ -164,6 +178,9 @@
 		E94B962F1B5C943C0001B7C8 /* XML Parsing */ = {
 			isa = PBXGroup;
 			children = (
+				E94B96331B5C9CE40001B7C8 /* GDataXMLNode.h */,
+				E94B96341B5C9CE40001B7C8 /* GDataXMLNode.m */,
+				E94B963B1B5CA6940001B7C8 /* GDataXMLNodeExtension.swift */,
 				E94B962B1B5C92690001B7C8 /* XMLParser.h */,
 				E94B962C1B5C92690001B7C8 /* XMLParser.m */,
 				E91F3A221B5C8EB500EB068A /* Stack.h */,
@@ -332,10 +349,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94B962D1B5C92690001B7C8 /* XMLParser.m in Sources */,
+				E94B963C1B5CA6940001B7C8 /* GDataXMLNodeExtension.swift in Sources */,
+				E90A93F91B5CB21F00380F9D /* RSSModel.swift in Sources */,
 				E91F3A261B5C8EB500EB068A /* Stack.m in Sources */,
 				E91F3A151B5C814A00EB068A /* RSSTableViewCell.swift in Sources */,
 				E91F39C91B59786B00EB068A /* ViewController.swift in Sources */,
 				E91F39C71B59786B00EB068A /* AppDelegate.swift in Sources */,
+				E94B96351B5C9CE40001B7C8 /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +436,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LIBRARY_SEARCH_PATHS = /usr/include/libxml2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -455,7 +481,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LIBRARY_SEARCH_PATHS = /usr/include/libxml2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -471,6 +503,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HotzRSSReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"HTZNetworkingManager\"",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HotzRSSReader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -485,6 +525,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HotzRSSReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"HTZNetworkingManager\"",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HotzRSSReader-Bridging-Header.h";
 			};
