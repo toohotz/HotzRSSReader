@@ -2,39 +2,71 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IhL-hR-jEi">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--HotzRSS Table View Controller-->
         <scene sceneID="h16-Hk-miK">
             <objects>
                 <tableViewController id="IhL-hR-jEi" customClass="HotzRSSTableViewController" customModule="HotzRSSReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="tjO-Sd-5dw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="1" sectionHeaderHeight="10" sectionFooterHeight="10" id="tjO-Sd-5dw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="4vS-3L-tDf">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kRSSTableViewCellIdentifier" rowHeight="200" id="4vS-3L-tDf" customClass="RSSTableViewCell" customModule="HotzRSSReader" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4vS-3L-tDf" id="HWX-ry-7iH">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8w-YO-gZ3">
-                                            <rect key="frame" x="8" y="25" width="100" height="100"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Story Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5m-zG-j1f">
-                                            <rect key="frame" x="261" y="25" width="78" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="751" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5Q-Jn-RZd">
+                                            <rect key="frame" x="18" y="102" width="567" height="82"/>
+                                            <string key="text">This Label Should Take Up Some Space This Label Should Take Up Some Space This Label Should Take Up Some Space This Label Should Take Up Some Space </string>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Short description of story" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdV-r7-OEM">
-                                            <rect key="frame" x="116" y="64" width="476" height="61"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, Aug 20, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnl-dg-l73">
+                                            <rect key="frame" x="18" y="67" width="121" height="20"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="753" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y0U-XA-Ej4">
+                                            <rect key="frame" x="18" y="30" width="567" height="22"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Y0U-XA-Ej4" secondAttribute="trailing" constant="15" id="5iQ-Wy-Grn"/>
+                                        <constraint firstAttribute="bottom" secondItem="e5Q-Jn-RZd" secondAttribute="bottom" constant="15" id="6od-6K-WJF"/>
+                                        <constraint firstItem="e5Q-Jn-RZd" firstAttribute="top" secondItem="hnl-dg-l73" secondAttribute="bottom" constant="15" id="Js8-gr-urF"/>
+                                        <constraint firstItem="e5Q-Jn-RZd" firstAttribute="top" secondItem="Y0U-XA-Ej4" secondAttribute="bottom" constant="15" id="Onh-rM-nYI"/>
+                                        <constraint firstItem="hnl-dg-l73" firstAttribute="top" secondItem="Y0U-XA-Ej4" secondAttribute="bottom" constant="15" id="RD6-Uy-a3I"/>
+                                        <constraint firstItem="e5Q-Jn-RZd" firstAttribute="width" secondItem="Y0U-XA-Ej4" secondAttribute="width" id="UX8-Ou-qSt"/>
+                                        <constraint firstItem="Y0U-XA-Ej4" firstAttribute="top" secondItem="HWX-ry-7iH" secondAttribute="top" constant="30" id="WjX-Vi-t2V"/>
+                                        <constraint firstItem="hnl-dg-l73" firstAttribute="leading" secondItem="Y0U-XA-Ej4" secondAttribute="leading" id="hsb-Gm-Mya"/>
+                                        <constraint firstItem="e5Q-Jn-RZd" firstAttribute="trailing" secondItem="Y0U-XA-Ej4" secondAttribute="trailing" id="kk0-Iy-sbl"/>
+                                        <constraint firstItem="Y0U-XA-Ej4" firstAttribute="leading" secondItem="e5Q-Jn-RZd" secondAttribute="leading" id="luN-VN-jls"/>
+                                        <constraint firstItem="Y0U-XA-Ej4" firstAttribute="leading" secondItem="HWX-ry-7iH" secondAttribute="leadingMargin" constant="10" id="qVc-Z5-dhZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="e5Q-Jn-RZd" secondAttribute="trailing" constant="15" id="tv8-52-VZY"/>
+                                        <constraint firstItem="e5Q-Jn-RZd" firstAttribute="top" secondItem="Y0U-XA-Ej4" secondAttribute="bottom" constant="15" id="xbp-Ih-Abv"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Onh-rM-nYI"/>
+                                            <exclude reference="tv8-52-VZY"/>
+                                            <exclude reference="xbp-Ih-Abv"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="articleDateLabel" destination="hnl-dg-l73" id="F7T-yz-8He"/>
+                                    <outlet property="descriptionLabel" destination="e5Q-Jn-RZd" id="EcB-ko-BF1"/>
+                                    <outlet property="storyTitleLabel" destination="Y0U-XA-Ej4" id="hRu-BU-xpf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -66,12 +98,12 @@
                                 <rect key="frame" x="16" y="180" width="568" height="152"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title of story" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdq-pf-3md">
-                                <rect key="frame" x="263" y="164" width="95" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="263" y="164" width="97" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

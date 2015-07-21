@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HotzRSSReader/ViewController.swift"
-            timestampString = "459113969.33458"
+            filePath = "HotzRSSReader/RSSModel.swift"
+            timestampString = "459188350.578743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "getAllArticleInformationFromItem(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

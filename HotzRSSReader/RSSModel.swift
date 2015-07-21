@@ -16,9 +16,7 @@ class GoogleRSSModel: NSObject {
         case Description
         case PublishDate
     }
-
     var channel: NSArray!
-
 
     /**
     Creates a Google RSS reader model from a given URL.
@@ -27,42 +25,52 @@ class GoogleRSSModel: NSObject {
 
     :returns: A Google RSS reader model.
     */
-   class func createRSSModelFromURL(url: NSURL) -> Item?
+     func createRSSModelFromURL(url: NSURL) -> Item?
     {
         var model = GoogleRSSModel()
         var RSSItem: Item? = Item()
         var articleTitles = [String]()
         if let document = GDataXMLDocument(data: NSData(contentsOfURL: url), options: UInt32(0), error: nil) {
+
             let documentRootChannel = document.rootElement().elementsForName("channel") as NSArray
-
             model.channel = document.rootElement().elementsForName("channel")
-//            println("The channel is \(model?.channel)")
+
             for individualChannel in model.channel {
+
                 let articleItem = individualChannel.elementsForName("item")
-
-                // Construct arrays of article feed information
                 let articleDictionary = getAllArticleInformationFromItem(articleItem)
-                RSSItem?.publishDates = articleDictionary.values.array[Int(ItemIndexName.Title.rawValue)] as? [String]
-                RSSItem?.titles = articleDictionary.values.array[Int(ItemIndexName.Description.rawValue)] as? [String]
-
-
+                RSSItem?.publishDates = articleDictionary["pubDate"] as? [String]
+                RSSItem?.titles = articleDictionary["title"] as? [String]
+                RSSItem?.descriptions = articleDictionary["description"] as? [String]
             }
         }
         return RSSItem
     }
-}
 
+    private func getAllArticleInformationFromItem(item: [AnyObject]!) -> [String : AnyObject]
+    {
+        var articleInformation = [String : AnyObject]()
 
+        articleInformation["title"] = getArticleStringValueFromItem(item, articleTag: "title")
+        articleInformation["description"] = getArticleStringValueFromItem(item, articleTag: "description")
 
-private func getAllArticleInformationFromItem(item: [AnyObject]!) -> [String : AnyObject]
-{
-    var articleInformation = [String : AnyObject]()
+        let dates = getArticleStringValueFromItem(item, articleTag: "pubDate")
+        var formattedDates: [String] = []
 
-    articleInformation["title"] = getArticleStringValueFromItem(item, "description")
-    articleInformation["description"] = getArticleStringValueFromItem(item, "pubDate")
+        for dateString in dates {
+            var dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "EEE, dd MM YYYY HH:mm:ss zzz"
+            var articleDate: NSDate? = NSDate()
+            articleDate = dateFormatter.dateFromString(dateString)
+            dateFormatter.dateStyle = .MediumStyle
+            formattedDates.append(dateFormatter.stringFromDate(articleDate!))
 
-    return articleInformation
-}
+        }
+        articleInformation["pubDate"] = formattedDates
+
+        return articleInformation
+    }
+
     private func getArticleStringValueFromItem(item: [AnyObject]!, articleTag: String) -> [String]
     {
         var itemValues = [String]()
@@ -77,10 +85,10 @@ private func getAllArticleInformationFromItem(item: [AnyObject]!) -> [String : A
         }
         return itemValues
     }
-
+}
 
     struct Item {
-        var titles: [String]!
+        var titles: [String]?
         var imageURL: NSURL?
         var images: UIImage? {
             return UIImage(data: NSData(contentsOfURL:imageURL!)!)

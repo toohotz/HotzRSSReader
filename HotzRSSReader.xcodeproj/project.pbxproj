@@ -16,7 +16,6 @@
 		E91F39D11B59786B00EB068A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91F39CF1B59786B00EB068A /* LaunchScreen.xib */; };
 		E91F39DD1B59786B00EB068A /* HotzRSSReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F39DC1B59786B00EB068A /* HotzRSSReaderTests.swift */; };
 		E91F3A151B5C814A00EB068A /* RSSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F3A141B5C814A00EB068A /* RSSTableViewCell.swift */; };
-		E91F3A161B5C814A00EB068A /* RSSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F3A141B5C814A00EB068A /* RSSTableViewCell.swift */; };
 		E91F3A261B5C8EB500EB068A /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = E91F3A231B5C8EB500EB068A /* Stack.m */; };
 		E91F3A271B5C8EB500EB068A /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = E91F3A231B5C8EB500EB068A /* Stack.m */; };
 		E94B962D1B5C92690001B7C8 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B962C1B5C92690001B7C8 /* XMLParser.m */; };
@@ -363,7 +362,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E91F3A161B5C814A00EB068A /* RSSTableViewCell.swift in Sources */,
 				E91F3A271B5C8EB500EB068A /* Stack.m in Sources */,
 				E94B962E1B5C92690001B7C8 /* XMLParser.m in Sources */,
 				E91F39DD1B59786B00EB068A /* HotzRSSReaderTests.swift in Sources */,
