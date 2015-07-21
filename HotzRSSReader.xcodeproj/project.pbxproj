@@ -23,6 +23,7 @@
 		E94B96351B5C9CE40001B7C8 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B96341B5C9CE40001B7C8 /* GDataXMLNode.m */; };
 		E94B96381B5C9D020001B7C8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E94B96371B5C9D020001B7C8 /* libxml2.dylib */; };
 		E94B963C1B5CA6940001B7C8 /* GDataXMLNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B963B1B5CA6940001B7C8 /* GDataXMLNodeExtension.swift */; };
+		E98175431B5EBEEB00A0D560 /* RSSReaderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98175421B5EBEEB00A0D560 /* RSSReaderDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		E94B96371B5C9D020001B7C8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		E94B96391B5C9DB30001B7C8 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		E94B963B1B5CA6940001B7C8 /* GDataXMLNodeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDataXMLNodeExtension.swift; sourceTree = "<group>"; };
+		E98175421B5EBEEB00A0D560 /* RSSReaderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSReaderDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +130,7 @@
 		E91F39C31B59786B00EB068A /* HotzRSSReader */ = {
 			isa = PBXGroup;
 			children = (
-				E90A93F81B5CB21F00380F9D /* RSSModel.swift */,
+				E94FB76E1B5EDAB4000C10C6 /* Models */,
 				E91F39C61B59786B00EB068A /* AppDelegate.swift */,
 				E94B96311B5C94500001B7C8 /* Views */,
 				E94B962F1B5C943C0001B7C8 /* XML Parsing */,
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				E91F39C81B59786B00EB068A /* ViewController.swift */,
+				E98175421B5EBEEB00A0D560 /* RSSReaderDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +197,14 @@
 				E91F3A141B5C814A00EB068A /* RSSTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		E94FB76E1B5EDAB4000C10C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E90A93F81B5CB21F00380F9D /* RSSModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +364,7 @@
 				E91F3A261B5C8EB500EB068A /* Stack.m in Sources */,
 				E91F3A151B5C814A00EB068A /* RSSTableViewCell.swift in Sources */,
 				E91F39C91B59786B00EB068A /* ViewController.swift in Sources */,
+				E98175431B5EBEEB00A0D560 /* RSSReaderDetailViewController.swift in Sources */,
 				E91F39C71B59786B00EB068A /* AppDelegate.swift in Sources */,
 				E94B96351B5C9CE40001B7C8 /* GDataXMLNode.m in Sources */,
 			);

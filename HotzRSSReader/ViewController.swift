@@ -52,5 +52,12 @@ class HotzRSSTableViewController: UITableViewController, NSXMLParserDelegate {
 
         return cell
     }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let detailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("detailViewController") as? RSSReaderDetailViewController
+        detailViewController?.configureDetailViewControllerWithItem(RSSModel!, articleIndexPath: indexPath)
+        navigationController?.pushViewController(detailViewController!, animated: true)
+    }
 }
 
