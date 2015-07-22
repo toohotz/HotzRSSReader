@@ -16,6 +16,12 @@ class GoogleRSSModel: NSObject {
         case Description
         case PublishDate
     }
+
+    enum ArticleKeys: String {
+        case Title = "title"
+        case Description = "description"
+        case PublishDate = "pubDate"
+    }
     var channel: NSArray!
 
     /**
@@ -30,21 +36,52 @@ class GoogleRSSModel: NSObject {
         var model = GoogleRSSModel()
         var RSSItem: Item? = Item()
         var articleTitles = [String]()
-        if let document = GDataXMLDocument(data: NSData(contentsOfURL: url), options: UInt32(0), error: nil) {
+        if Reachability.isConnectedToNetwork() == true {
+            if let document = GDataXMLDocument(data: NSData(contentsOfURL: url), options: UInt32(0), error: nil) {
 
-            let documentRootChannel = document.rootElement().elementsForName("channel") as NSArray
-            model.channel = document.rootElement().elementsForName("channel")
+                let documentRootChannel = document.rootElement().elementsForName("channel") as NSArray
+                model.channel = document.rootElement().elementsForName("channel")
 
-            for individualChannel in model.channel {
+                for individualChannel in model.channel {
 
-                let articleItem = individualChannel.elementsForName("item")
-                let articleDictionary = getAllArticleInformationFromItem(articleItem)
-                RSSItem?.publishDates = articleDictionary["pubDate"] as? [String]
-                RSSItem?.titles = articleDictionary["title"] as? [String]
-                RSSItem?.descriptions = articleDictionary["description"] as? [String]
+                    let articleItem = individualChannel.elementsForName("item")
+                    let articleDictionary = getAllArticleInformationFromItem(articleItem)
+                    RSSItem?.publishDates = articleDictionary[ArticleKeys.PublishDate.rawValue] as? [String]
+                    RSSItem?.titles = articleDictionary[ArticleKeys.Title.rawValue] as? [String]
+                    RSSItem?.descriptions = articleDictionary[ArticleKeys.Description.rawValue] as? [String]
+                    storeOfflineData(articleDictionary)
+                }
             }
+        } else {
+            // Try to load offline data
+            let resultDictionary = NSDictionary(contentsOfFile: readOfflineStoredData()) as! [String : AnyObject]
+            RSSItem?.publishDates = resultDictionary[ArticleKeys.PublishDate.rawValue] as? [String]
+            RSSItem?.titles = resultDictionary[ArticleKeys.Title.rawValue] as? [String]
+            RSSItem?.descriptions = resultDictionary[ArticleKeys.Description.rawValue] as? [String]
         }
+
         return RSSItem
+    }
+
+    private func storeOfflineData(dict: [String : AnyObject])
+    {
+        let plistPath = readOfflineStoredData()
+        (dict as NSDictionary).writeToFile(plistPath, atomically: false)
+        let results = NSDictionary(contentsOfFile: plistPath)
+    }
+
+    func readOfflineStoredData() -> String
+    {
+        let filePaths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let documentsDirectory = (filePaths as NSArray).objectAtIndex(0) as! NSString
+        let plistPath = documentsDirectory.stringByAppendingPathComponent("OfflineStorage.plist")
+
+        let fileManager = NSFileManager.defaultManager()
+        if !fileManager.fileExistsAtPath(plistPath) {
+            let bundle = NSBundle.mainBundle().pathForResource("OfflineStorage", ofType: "plist")
+            fileManager.copyItemAtPath(bundle!, toPath: plistPath, error: nil)
+        }
+        return plistPath
     }
 
     private func getAllArticleInformationFromItem(item: [AnyObject]!) -> [String : AnyObject]
@@ -95,4 +132,29 @@ class GoogleRSSModel: NSObject {
         }
         var publishDates: [String]?
         var descriptions: [String]?
+    }
+
+    public class Reachability {
+
+        class func isConnectedToNetwork()->Bool{
+
+            var Status:Bool = false
+            let url = NSURL(string: "http://google.com/")
+            let request = NSMutableURLRequest(URL: url!)
+            request.HTTPMethod = "HEAD"
+            request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData
+            request.timeoutInterval = 10.0
+
+            var response: NSURLResponse?
+
+            var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil) as NSData?
+
+            if let httpResponse = response as? NSHTTPURLResponse {
+                if httpResponse.statusCode == 200 {
+                    Status = true
+                }
+            }
+
+            return Status
+        }
     }

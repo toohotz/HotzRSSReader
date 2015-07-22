@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 toohotz. All rights reserved.
 //
 
+import SystemConfiguration
 import UIKit
 
 class HotzRSSTableViewController: UITableViewController, NSXMLParserDelegate {
@@ -15,16 +16,15 @@ class HotzRSSTableViewController: UITableViewController, NSXMLParserDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let data = NSData(contentsOfURL: NSURL(string: RSSURL)!)
-        let gDoc = GDataXMLDocument(data: data!, options: UInt32(0), error: nil)
-        if gDoc != nil {
-            let myRSSModel = GoogleRSSModel()
-             RSSModel = myRSSModel.createRSSModelFromURL(NSURL(string: RSSURL)!)
-        } else {
-            println("The XML docuement is nil")
-        }
-
+        fetchData()
     }
+
+    private func fetchData()
+    {
+        let myRSSModel = GoogleRSSModel()
+        RSSModel = myRSSModel.createRSSModelFromURL(NSURL(string: RSSURL)!)
+    }
+   
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
         return (section == 0) ? "Apple's Latest Hot News" : nil
