@@ -24,6 +24,12 @@ class RSSTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
+    /**
+    Configures the RSS tableview cell with a given RSS article item.
+
+    :param: indexPath   Index path of the article item.
+    :param: articleItem The RSS article item.
+    */
     func configureCellAtIndex(indexPath: NSIndexPath, articleItem:Item)
     {
         storyTitleLabel.text = (articleItem.titles! as NSArray).objectAtIndex(indexPath.row) as? String

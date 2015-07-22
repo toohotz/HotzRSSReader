@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 
 class RSSReaderDetailViewController: UIViewController, UITextViewDelegate ,UIScrollViewDelegate {
-    
+
+    //MARK: Variables
+
     @IBOutlet weak var articleTitleLabel: UILabel!
     @IBOutlet weak var articleStoryTextView: UITextView!
     var titles: [String] = []
@@ -25,6 +27,14 @@ class RSSReaderDetailViewController: UIViewController, UITextViewDelegate ,UIScr
         super.viewDidLoad()
     }
 
+    //MARK: Public Methods
+
+    /**
+    Configures the detail view controller with a given RSS article item.
+
+    :param: articleItem      The RSS article item.
+    :param: articleIndexPath The index path for the provided article item.
+    */
     func configureDetailViewControllerWithItem(articleItem:Item, articleIndexPath:NSIndexPath)
     {
         currentIndexPath = articleIndexPath
@@ -35,6 +45,7 @@ class RSSReaderDetailViewController: UIViewController, UITextViewDelegate ,UIScr
             articleStories = articleDescriptions
         }
     }
+    //MARK: Private Methods
 
     private func setupUI()
     {
@@ -54,13 +65,13 @@ class RSSReaderDetailViewController: UIViewController, UITextViewDelegate ,UIScr
         }
     }
 
-     func autoScrollArticle()
+    func autoScrollArticle()
     {
         yOffset = yOffset + 2.5
         articleStoryTextView.setContentOffset(CGPointMake(articleStoryTextView.contentOffset.x, yOffset), animated: true)
     }
 
-    func scrollViewDidScroll(scrollView: UIScrollView)
+   private func scrollViewDidScroll(scrollView: UIScrollView)
     {
         yOffset = scrollView.contentOffset.y
 

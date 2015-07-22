@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 toohotz. All rights reserved.
 //
 
-import SystemConfiguration
 import UIKit
 
 class HotzRSSTableViewController: UITableViewController, NSXMLParserDelegate {
@@ -18,13 +17,17 @@ class HotzRSSTableViewController: UITableViewController, NSXMLParserDelegate {
         super.viewDidLoad()
         fetchData()
     }
+    
+    //MARK: Private Methods
 
     private func fetchData()
     {
         let myRSSModel = GoogleRSSModel()
         RSSModel = myRSSModel.createRSSModelFromURL(NSURL(string: RSSURL)!)
     }
-   
+
+    //MARK: UITableViewDelegate Methods
+
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
         return (section == 0) ? "Apple's Latest Hot News" : nil

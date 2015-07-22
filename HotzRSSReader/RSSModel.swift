@@ -11,6 +11,8 @@ import UIKit
 
 class GoogleRSSModel: NSObject {
 
+    //MARK: Enums
+
     enum ItemIndexName: UInt {
         case Title
         case Description
@@ -22,7 +24,12 @@ class GoogleRSSModel: NSObject {
         case Description = "description"
         case PublishDate = "pubDate"
     }
+
+    //MARK: Variables
+
     var channel: NSArray!
+
+    //MARK: Public Methods
 
     /**
     Creates a Google RSS reader model from a given URL.
@@ -62,6 +69,7 @@ class GoogleRSSModel: NSObject {
 
         return RSSItem
     }
+    //MARK: Private Methods
 
     private func storeOfflineData(dict: [String : AnyObject])
     {
@@ -70,7 +78,7 @@ class GoogleRSSModel: NSObject {
         let results = NSDictionary(contentsOfFile: plistPath)
     }
 
-    func readOfflineStoredData() -> String
+    private func readOfflineStoredData() -> String
     {
         let filePaths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         let documentsDirectory = (filePaths as NSArray).objectAtIndex(0) as! NSString
@@ -88,10 +96,10 @@ class GoogleRSSModel: NSObject {
     {
         var articleInformation = [String : AnyObject]()
 
-        articleInformation["title"] = getArticleStringValueFromItem(item, articleTag: "title")
-        articleInformation["description"] = getArticleStringValueFromItem(item, articleTag: "description")
+        articleInformation[ArticleKeys.Title.rawValue] = getArticleStringValueFromItem(item, articleTag: ArticleKeys.Title.rawValue)
+        articleInformation[ArticleKeys.Description.rawValue] = getArticleStringValueFromItem(item, articleTag: ArticleKeys.Description.rawValue)
 
-        let dates = getArticleStringValueFromItem(item, articleTag: "pubDate")
+        let dates = getArticleStringValueFromItem(item, articleTag: ArticleKeys.PublishDate.rawValue)
         var formattedDates: [String] = []
 
         for dateString in dates {
@@ -103,7 +111,7 @@ class GoogleRSSModel: NSObject {
             formattedDates.append(dateFormatter.stringFromDate(articleDate!))
 
         }
-        articleInformation["pubDate"] = formattedDates
+        articleInformation[ArticleKeys.PublishDate.rawValue] = formattedDates
 
         return articleInformation
     }
@@ -123,7 +131,9 @@ class GoogleRSSModel: NSObject {
         return itemValues
     }
 }
-
+    /**
+    *  RSS Article Item Struct.
+    */
     struct Item {
         var titles: [String]?
         var imageURL: NSURL?
@@ -136,7 +146,8 @@ class GoogleRSSModel: NSObject {
 
     public class Reachability {
 
-        class func isConnectedToNetwork()->Bool{
+        /// Return a boolean identifying if connection to the Internet is possible.
+        class func isConnectedToNetwork() -> Bool{
 
             var Status:Bool = false
             let url = NSURL(string: "http://google.com/")
